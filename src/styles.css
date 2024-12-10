@@ -1,0 +1,99 @@
+/* Navbar styles */
+.navbar {
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Game List and Card styles */
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.game-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.game-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.game-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.game-info h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.game-genre {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.game-price {
+  font-size: 16px;
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+.view-details-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #1669c1;
+  box-shadow: #1669c1 0 0 6px;
+}
+
+.navbar-btn {
+  
+  background-color: #1e88e5;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
