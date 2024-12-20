@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getGames } from "../services/api";
+import { getGames } from '../services/api';
 import GameCard from '../components/GameCard';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,8 +17,8 @@ const Home = () => {
         const data = await getGames();
         setGames(data);
       } catch (err) {
-        console.error("Error in Home:", err);
-        setError(err.message || "Failed to load games.");
+        console.error('Error in Home:', err);
+        setError(err.message || 'Failed to load games.');
       } finally {
         setLoading(false);
       }
@@ -33,7 +33,6 @@ const Home = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
- 
 
   return (
     <div className="home-page">
