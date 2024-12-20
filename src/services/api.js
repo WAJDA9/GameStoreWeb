@@ -21,3 +21,13 @@ export const getGameById = async (id) => {
     throw error;
   }
 };
+
+export const addGame = async (game) => {
+  try {
+    const response = await axios.post(API_BASE_URL, game);
+    return response.data;
+  } catch (error) {
+    console.error("Error adding game:", error);
+    throw error;
+  }
+}
