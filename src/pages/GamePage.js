@@ -1,7 +1,7 @@
 // src/pages/GamePage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import { getGameById } from "../services/api";
+import { getGameById } from "../services/api";
 
 const GamePage = () => {
   const { id } = useParams();
@@ -16,22 +16,22 @@ const GamePage = () => {
   });
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchGameDetails = async () => {
-  //     try {
-  //       const data = await getGameById(id);
-  //       setGame(data);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       console.error("Error fetching game details:", error);
-  //     }
-  //   };
-  //   fetchGameDetails();
-  // }, [id]);
+  useEffect(() => {
+    const fetchGameDetails = async () => {
+      try {
+        const data = await getGameById(id);
+        setGame(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching game details:", error);
+      }
+    };
+    fetchGameDetails();
+  }, [id]);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="game-page">
